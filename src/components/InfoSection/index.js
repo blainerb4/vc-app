@@ -5,12 +5,12 @@ import {
     InfoWrapper,
     InfoRow, 
     Column1,
+    Column2,
     TextWrapper,
     TopLine,
     Heading,
     Subtitle,
     ButtonWrap,
-    Column2,
     ImgWrap,
     Img
 } from './info-elements'
@@ -28,7 +28,10 @@ const InfoSection = ({
     description, 
     buttonLabel, 
     img, 
-    alt
+    alt,
+    primary,
+    dark,
+    dark2
 }) => {
     return (
         <>
@@ -41,7 +44,17 @@ const InfoSection = ({
                         <Heading lightText={lightText}>{headline}</Heading>
                         <Subtitle darkText={darkText}>{description}</Subtitle>
                         <ButtonWrap>
-                            <Button to='home'>{buttonLabel}</Button>
+                            <Button 
+                            to='home' 
+                            smooth={true} 
+                            duration={500} 
+                            spy={true}
+                            exact='true'
+                            offset={-80}
+                            primary={primary ? 1 : 0}
+                            dark={dark ? 1 : 0}
+                            dark2={dark2 ? 1 : 0}
+                            >{buttonLabel}</Button>
                         </ButtonWrap>
                     </TextWrapper>
                     </Column1>
