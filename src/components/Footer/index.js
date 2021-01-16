@@ -1,4 +1,5 @@
 import React from 'react'
+import {animateScroll as scroll} from 'react-scroll'
 import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin, FaReddit, FaTwitter } from 'react-icons/fa'
 import { 
     FooterContainer,
@@ -18,6 +19,11 @@ import {
 
 
 const Footer = () => {
+
+    const toggleHome = () => {
+        scroll.scrollToTop()
+    };
+
     return (
         <FooterContainer>
            <FooterWrap>
@@ -55,7 +61,7 @@ const Footer = () => {
                 </FooterLinksContainer>
                 <SocialMedia>
                     <SocialMediaWrap>
-                        <SocialLogo to='/'>
+                        <SocialLogo to='/' onClick={toggleHome}>
                             Poplar
                         </SocialLogo>
                         <WebsiteRights>Poplar © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
