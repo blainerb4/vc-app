@@ -3,9 +3,9 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import SideBar from '../components/Sidebar'
 //import ScrollToTop from '../components/scroll-to-top'
-import SignIn from '../components/SignIn'
+import SignUp from '../components/SignUp'
 
-const SignInPage = () => {
+const SignUpPage = () => {
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -17,10 +17,10 @@ const SignInPage = () => {
         <>
             <SideBar isOpen={isOpen} toggle={toggle}/> 
             <Navbar toggle={toggle}/>
-            <SignIn />
+            <SignUp />
             <Footer />
         </>
     )
 }
         //    <SignIn />
-export default SignInPage
+export default SignUpPage

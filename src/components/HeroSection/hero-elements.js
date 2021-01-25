@@ -23,7 +23,6 @@ export const HeroContainer = styled.div`
         z-index: 2;
     }
 `
-//add before styling
 
 export const HeroBg = styled.div`
     position: absolute;
